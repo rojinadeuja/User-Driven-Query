@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User-Driven-Query</title>
-</head>
-<body>
-<h3> Please enter your query below: </h3>
-<form method = "POST" action = "submit-query.php">
-    <input type ="text" name="user_query"/>
-    <input type = "submit" name="submit"/>
-</form>
-</body>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>User Driven Query</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form method="post" action="run_query.php">
+            <input type="text" name="query"/>
+            <input type="submit"/>
+        </form>
+    </body>
 </html>
