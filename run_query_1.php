@@ -1,13 +1,3 @@
-<html>
-    <head>
-        <title>User Driven Query</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1> User Driven Query </h1>
-        <br><br>
-        <input type="button" value="Enter a new query" onclick="window.location.href='index.html'" style="float: right"/>
 <?php
 // Check if the form is submitted 
 if ( isset( $_POST['submit'] ) ) { 
@@ -29,7 +19,8 @@ if ( isset( $_POST['submit'] ) ) {
     $query = mysqli_query($server, $myquery);
     
     if ( ! $query ) {
-        echo ('INVALID QUERY! Please try again with a valid query.');
+        echo ('Error!');
+        echo mysqli_error();
         die;
     }
     
@@ -42,8 +33,7 @@ if ( isset( $_POST['submit'] ) ) {
     echo json_encode($data);     
      
     mysqli_close($server);
+exit;
 }
 ?>
-    </body>
-</html>
 
